@@ -4,27 +4,43 @@ body {
     background-size: 100%;
 }   
 
-h1 {
-    font-family: 'Monoton', cursive;
-    font-size: 200%;
-    text-align: center;
-    letter-spacing: 3px;
+#title {
+  margin: 3%;
 }
 
-form {
-    margin-top: 25px;
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 250%;
     text-align: center;
+    letter-spacing: 3px;
+
+}
+
+form#rangeSlider {
+    margin-top: 25px;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
     
   }
   
   input {
-    width: 80%;
-    display: block;
+    width: 50%;
+    
     margin: 0 auto;
   }
   
-  output {
-    display: block;
+output {
+    
     margin: 25px auto;
     font-size:2em;
+  }
+
+.dropdown {
+  margin: 25px auto;
+  text-align: 0 auto;
+}
+
+  #formGroupExampleInput {
+    width: 60%;
   }

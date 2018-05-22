@@ -14,25 +14,25 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Data
-var lunches = [
+var movies = [
   {
-    lunch: "A."
+    movie: "A."
   }, {
-    lunch: "B"
+    movie: "B"
   }, {
-    lunch: "C"
+    movie: "C"
   }, {
-    lunch: "D"
+    movie: "D"
   }
 ];
 
 // Routes
 app.get("/weekday", function(req, res) {
-  res.render("index", lunches[0]);
+  res.render("index", movies[0]);
 });
 
 app.get("/weekend", function(req, res) {
-  res.render("index", lunches[1]);
+  res.render("index", movies[1]);
 });
 
 app.get("/lunches", function(req, res) {
