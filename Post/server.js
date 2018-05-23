@@ -1,9 +1,35 @@
 // Dependencies
 var express = require("express");
 var exphbs = require("express-handlebars");
+var sequelize = require("sequelize");
 
 // Create an instance of the express app.
 var app = express();
+
+// Connect to SQL database
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "root"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+// Query the database
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(                 "Result: " + result);
+  });
+});
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku

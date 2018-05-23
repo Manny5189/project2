@@ -1,7 +1,8 @@
 body {
     background-image: url("images/georgia-vagim-381292-unsplash.jpg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }   
 
 #title {
@@ -9,7 +10,7 @@ body {
   margin-top: 8%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 90%;
+  margin-bottom: 60%;
 }
 
  a:link, a:hover, a:active, a:visited {
@@ -20,7 +21,12 @@ body {
   margin: 0 auto;
 }
 
-span {
+.items, .dropdown-item {
+  font-family: 'Comfortaa', cursive;
+  font-size: 200%;
+}
+
+#mood {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -56,6 +62,7 @@ output {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 3%;
 }
 
 #formGroupExampleInput {
@@ -64,4 +71,8 @@ output {
 
 .btn {
   margin: 0 auto;
+}
+
+.dropdown, .form-group, #submitButton {
+ margin-top: 3%;
 }

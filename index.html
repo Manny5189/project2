@@ -19,48 +19,55 @@
 </head>
 <body>
     <div id="title"><h1>FlickPicks</h1>
-      <span>
+      <div id="mood">
         What are you in the mood for?
-        <br>
-        <a href="#theCriteria">Get Started</a></span>
+        <br><br>
+        <a href="#theCriteria">Get Started</a>
+      </div>
     </div>
   
   <div id="theCriteria">
+
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Genres
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action/Adventure</a>
+            <a class="dropdown-item" href="#">Comedy</a>
+            <a class="dropdown-item" href="#">Crime</a>
+            <a class="dropdown-item" href="#">Documentary</a>
+            <a class="dropdown-item" href="#">Drama</a>
+            <a class="dropdown-item" href="#">Horror</a>
+            <a class="dropdown-item" href="#">Sci-fi</a>
+          </div>
+        </div>
     <form id="rangeSliderRating">
+        <br>
+        <p class="items">Star Rating</p>
+            <output for=value id="outputRating">0</output><br>
             <input type="range" id="value" value="1" step="1" min="1" max="10" oninput="outputUpdateRating(value)">
-            <br>
-            <output for=value id="outputRating">Star Rating</output>
+            
           </form>
 
           <form id="rangeSliderDuration">
+              <br>
+              <p class="items">Duration</p>
+              <output for=value id="outputDuration">0</output><br>
             <input type="range" id="value" value="1" step="1" min="1" max="300" oninput="outputUpdateDuration(value)">
-            <br>
-            <output for=value id="outputDuration">Duration</output>
+           
           </form>
 
-          <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Genres
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action/Adventure</a>
-                  <a class="dropdown-item" href="#">Comedy</a>
-                  <a class="dropdown-item" href="#">Crime</a>
-                  <a class="dropdown-item" href="#">Documentary</a>
-                  <a class="dropdown-item" href="#">Drama</a>
-                  <a class="dropdown-item" href="#">Horror</a>
-                  <a class="dropdown-item" href="#">Sci-fi</a>
-                </div>
-              </div>
+          
 
               <form>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Movie Title</label>
+                      <label for="formGroupExampleInput"><p class="items">Movie Title</p></label>
                       <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">
                     </div>
                   </form>
 
-              <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+              <button type="button" class="btn btn-secondary btn-lg" id="submitButton">Submit</button>
             </div>
              
           <div class="results"></div>
