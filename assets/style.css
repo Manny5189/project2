@@ -1,46 +1,67 @@
 body {
     background-image: url("images/georgia-vagim-381292-unsplash.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
 }   
 
 #title {
-  margin: 3%;
+  text-align: center;
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90%;
+}
+
+ a:link, a:hover, a:active, a:visited {
+  font-size: 275%;
+  font-family: 'Comfortaa', cursive;
+  text-decoration: none;
+  color: black;
+  margin: 0 auto;
+}
+
+span {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+
 }
 
 h1 {
-    font-family: 'Comfortaa', cursive;
-    font-size: 250%;
+  font-family: 'Bungee Shade', cursive;
+    font-size: 400%;
     text-align: center;
     letter-spacing: 3px;
-
 }
 
-form#rangeSlider {
+
+form#rangeSliderRating, #rangeSliderDuration {
     margin-top: 25px;
     margin: 0 auto;
     text-align: center;
     width: 60%;
-    
-  }
+}
   
-  input {
+input {
     width: 50%;
-    
     margin: 0 auto;
-  }
+}
   
 output {
-    
-    margin: 25px auto;
-    font-size:2em;
-  }
-
-.dropdown {
-  margin: 25px auto;
-  text-align: 0 auto;
+    font-size: 2em;
 }
 
-  #formGroupExampleInput {
+#theCriteria {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#formGroupExampleInput {
     width: 60%;
-  }
+}
+
+.btn {
+  margin: 0 auto;
+}
