@@ -4,6 +4,10 @@ var bodyParser = require('body-parser');
 
 var path = require('path');
 
+var mysql = require("mysql");
+
+var connection;
+
 var app = express();
 var PORT = 3000;
 
@@ -15,6 +19,17 @@ app.get("/", function(req, res) {
 app.get("/about", function(req, res) {
     res.send("All about me");
 });
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "hacktheplanet",
+    database: "moviesDB"
+  }
+}
 
 
 
