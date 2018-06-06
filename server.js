@@ -13,7 +13,7 @@ console.log("Listening on Port 3000");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.get("/", function(req, res) {
-    res.send("Welcome to my website");
+    res.send('index');
   });
 app.get("/about", function(req, res) {
     res.send("All about me");
