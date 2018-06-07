@@ -11,10 +11,17 @@ console.log("Listening on Port 3000");
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
+
 app.get("/", function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });
-app.get("/about", function(req, res) {
-    res.send("All about me");
+
+app.get('/style.css', function(req, res){
+  res.sendfile(__dirname + 'assets/style.css');
+});
+
+app.get('/main.js', function(req, res){
+  res.sendfile(__dirname + '/main.js');
 });
