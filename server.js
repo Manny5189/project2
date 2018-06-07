@@ -18,8 +18,8 @@ app.get("/", function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });
 
-app.get('assets/style.css', function(req, res){
-  res.sendfile(__dirname + 'assets/style.css');
+app.get('/style.css', function(req, res){
+  res.sendfile(__dirname + '/style.css');
 });
 
 app.get('/main.js', function(req, res){
