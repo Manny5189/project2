@@ -4,20 +4,26 @@ var bodyParser = require('body-parser');
 
 var path = require('path');
 
-var mysql = require("mysql");
-
-var connection;
-
 var app = express();
-var PORT = 3000;
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
+
 app.get("/", function(req, res) {
-    res.send("Welcome to my website");
-  });
-app.get("/about", function(req, res) {
-    res.send("All about me");
+    res.sendfile(__dirname + '/index.html');
+});
+
+app.get('/style.css', function(req, res){
+  res.sendfile(__dirname + '/style.css');
+});
+
+app.get('/main.js', function(req, res){
+  res.sendfile(__dirname + '/main.js');
 });
 
 if (process.env.JAWSDB_URL) {
@@ -30,16 +36,3 @@ if (process.env.JAWSDB_URL) {
     database: "moviesDB"
   }
 }
-
-
-
-
-
-
-
-
-
-
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
